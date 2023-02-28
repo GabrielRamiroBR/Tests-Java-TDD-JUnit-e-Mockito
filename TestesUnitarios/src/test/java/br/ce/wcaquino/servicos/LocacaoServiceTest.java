@@ -43,6 +43,7 @@ import br.ce.wcaquino.matchers.DiaSemanaMatcher;
 import br.ce.wcaquino.matchers.MatchersProprios;
 import br.ce.wcaquino.utils.DataUtils;
 import br.ce.wcaquinodaos.LocacaoDAOFake;
+import buildermaster.BuilderMaster;
 import br.ce.wcaquinodaos.LocacaoDAO;
 
 public class LocacaoServiceTest {
@@ -205,6 +206,9 @@ public class LocacaoServiceTest {
 		  Assert.assertThat(locacao.getDataRetorno(), new DiaSemanaMatcher(Calendar.SUNDAY));
 		 
 		/* assertThat(locacao.getDataRetorno(), caiNumaSegunda()); */
+	}
+	public static void main(String[] args) {
+		new BuilderMaster().gerarCodigoClasse(Locacao.class);
 	}
 
 }
